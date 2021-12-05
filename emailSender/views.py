@@ -5,16 +5,6 @@ from utilities.EmailService import EmailService
 
 
 def home_page(request):
-    # EmailService.send_email(
-    #     'test email',
-    #     ['abolfazl.abdi3941@gmail.com'],
-    #     'emails/email_template.html',
-    #     {
-    #         'title': 'test mail',
-    #         'description': 'hello everyone'
-    #     }
-    # )
-
     if request.method == "POST":
         subject = request.POST.get('subject')
         emails = request.POST.get('emails')
